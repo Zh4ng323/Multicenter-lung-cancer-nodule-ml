@@ -1,0 +1,40 @@
+{
+  "name": "Lung Cancer Early Screening AI Warning System",
+  "short_name": "LungCancerAI",
+  "description": "Multi-modal TCM four-diagnosis lung cancer early screening CDS platform",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f0f3f7",
+  "theme_color": "#0d47a1",
+  "categories": ["medical", "health", "productivity"],
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "pwa/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa/icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "pwa/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

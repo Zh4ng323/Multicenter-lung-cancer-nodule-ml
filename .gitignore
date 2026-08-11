@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training outputs (regenerable)
+results/
+results-*/
+results_*/
+*.log
+
+# Model training checkpoints (large, regenerable; the LOCKED model ships in models/locked_svm)
+shap_checkpoint.pkl
+*.pkl
+
+# Full source data matrices (NOT released — only the subsets in data/ ship)
+去除重复人员异常值处理后-Lasso后舌脉面.csv
+两组舌面脉*.csv
+特征.xlsx
+
+# Web app runtime / sensitive
+web_app/users.json
+web_app/prediction_results/
+web_app/training_results/
+web_app/build/
+web_app/build_lite/
+web_app/dist/
+web_app/dist_lite/
+web_app/_ui_preview/
+web_app/gui-test-screenshots/
+web_app/*.zip
+web_app/_internal/
+
+# Manuscript / design source files (cite the published version instead)
+*.docx
+*.psd
+*.pptx
+*.pptm
+
+# IDE / OS / tool state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/
+.zcode/
+.codex/

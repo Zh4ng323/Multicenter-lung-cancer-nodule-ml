@@ -1,0 +1,26 @@
+services:
+  lung-cancer-ai:
+    build: .
+    container_name: lung-cancer-ai
+    ports:
+      - "7860:7860"
+    volumes:
+      # 生产模型目录：把训练好的模型文件夹（含 best_model.joblib、
+      # calibrator.joblib、model_metadata.json、shap_background.npy）
+      # 放到宿主机 ./saved_models 下，无需重新构建镜像即可更新模型。
+      - ./saved_models:/app/saved_models
+      # 登录用户文件（明文密码被哈希后保存）。首次部署前请先生成，
+      # 并在服务器上修改默认密码。
+      - ./users.json:/app/users.json
+    environment:
+      - SERVER_NAME=0.0.0.0
+      - SERVER_PORT=7860
+      - AUTH_ENABLED=true
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          # 2G 内存的服务器：容器限制 1.5G，留 0.5G 给系统 + nginx；
+          # 4G 内存的服务器可改为 3G。部署前建议先给服务器加 swap（见部署指南）。
+          memory: 1536M

@@ -1,0 +1,39 @@
+# 打包/构建产物（体积巨大，绝不能进镜像）
+dist
+dist_lite
+build
+build_lite
+__pycache__
+*.pyc
+
+# 版本控制与编辑器/工具目录
+.git
+.claude
+.zcode
+.codex
+.agents
+
+# 本地结果/临时/归档数据
+saved_models_archive
+training_results
+prediction_results
+gui-test-screenshots
+_ui_preview
+results
+results-*
+archive-*
+smoke_test
+0803模型和shapcheckpoint
+
+# 日志与杂项
+*.log
+*.rar
+*.zip
+ScreenShot_*.png
+desktop_launcher.py
+build_exe.py
+build_exe_lite.py
+LungCancerAI.spec
+
+# 注意：saved_models/（生产模型）、assets/、pwa/、users.json 必须保留，
+# 它们会被 COPY 进镜像 / 通过 volume 挂载。
